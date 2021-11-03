@@ -1,1 +1,1 @@
-本リポジトリには，jsPsychで行動課題・質問紙を作成する際に使用する最小限のファイル・フォルダを用意しています。こちらのリポジトリをimportして各自活用ください。
+本リポジトリには，jsPsych6.3.1で行動課題・質問紙を作成する際に使用する最小限のファイル・フォルダを用意しています。こちらのリポジトリをimportして各自活用ください。import後は，「name_of_repository」フォルダの名前を変更し，demo_name_of_repository.htmlとname_of_repository.htmlを開いて，「name_of_repository」から変更したフォルダ名に書き換えをしてください。

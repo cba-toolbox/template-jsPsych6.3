@@ -1,10 +1,11 @@
 /* デモ用のストループ課題 */
-
-/* 挨拶 */
-var welcome = {
-    type: "html-keyboard-response",
-    stimulus: "<p><span style='font-size:20pt;'>実験にお越しいただき，ありがとうございます!!!</span></p>"+
-    "<p>キーボードのキーをどれか押して，開始してください</p>"
+/* 全画面化とスタート */
+var fullscreen = {
+  type: "fullscreen",
+  message: "<p><span style='font-size:20pt;'>それでは課題をはじめます。</span></p>"+
+           "<p><span style='font-size:20pt;'>以下の「開始」を押すと，全画面になって課題がはじまります。</span></p>",
+  button_label: "<p style='font-size:20px'>開始</p>",
+  fullscreen_mode: true,
 };
 
 /* 教示 */
@@ -25,70 +26,38 @@ var instructions = {
 
 /*刺激の設定*/
 var stimuli = [
-    {
-      stimulus: "<p style='color:red;font-size:60pt;'>赤</p>",
-      data: { no:'1', stim_type: 'congruent', correct_key_press: 'z'}
-    },
-    {
-      stimulus: "<p style='color:green;font-size:60pt;'>赤</p>",
-      data: { no:'2', stim_type: 'incongruent', correct_key_press: 'n'}
-    },
-    {
-      stimulus: "<p style='color:yellow;font-size:60pt;'>赤</p>",
-      data: { no:'3', stim_type: 'incongruent', correct_key_press: 'm'}
-    },
-    {
-      stimulus: "<p style='color:blue;font-size:60pt;'>赤</p>",
-      data: { no:'4', stim_type: 'incongruent', correct_key_press: 'x'}
-    },
-    {
-      stimulus: "<p style='color:red;font-size:60pt;'>緑</p>",
-      data: { no:'5', stim_type: 'congruent', correct_key_press: 'z'}
-    },
-    {
-      stimulus: "<p style='color:green;font-size:60pt;'>緑</p>",
-      data: { no:'6', stim_type: 'incongruent', correct_key_press: 'n'}
-    },
-    {
-      stimulus: "<p style='color:yellow;font-size:60pt;'>緑</p>",
-      data: { no:'7', stim_type: 'incongruent', correct_key_press: 'm'}
-    },
-    {
-      stimulus: "<p style='color:blue;font-size:60pt;'>緑</p>",
-      data: { no:'8', stim_type: 'incongruent', correct_key_press: 'x'}
-    },
-    {
-      stimulus: "<p style='color:red;font-size:60pt;'>黄</p>",
-      data: { no:'9', stim_type: 'congruent', correct_key_press: 'z'}
-    },
-    {
-      stimulus: "<p style='color:green;font-size:60pt;'>黄</p>",
-      data: { no:'10', stim_type: 'incongruent', correct_key_press: 'n'}
-    },
-    {
-      stimulus: "<p style='color:yellow;font-size:60pt;'>黄</p>",
-      data: { no:'11', stim_type: 'incongruent', correct_key_press: 'm'}
-    },
-    {
-      stimulus: "<p style='color:blue;font-size:60pt;'>黄</p>",
-      data: { no:'12', stim_type: 'incongruent', correct_key_press: 'x'}
-    },
-    {
-      stimulus: "<p style='color:red;font-size:60pt;'>青</p>",
-      data: { no:'13', stim_type: 'congruent', correct_key_press: 'z'}
-    },
-    {
-      stimulus: "<p style='color:green;font-size:60pt;'>青</p>",
-      data: { no:'14', stim_type: 'incongruent', correct_key_press: 'n'}
-    },
-    {
-      stimulus: "<p style='color:yellow;font-size:60pt;'>青</p>",
-      data: { no:'15', stim_type: 'incongruent', correct_key_press: 'm'}
-    },
-    {
-      stimulus: "<p style='color:blue;font-size:60pt;'>青</p>",
-      data: { no:'16', stim_type: 'incongruent', correct_key_press: 'x'}
-    }
+  {stimulus: "<p style='color:red;font-size:60pt;'>赤</p>",
+   data: { no:'1', stim_type: 'congruent', correct_key_press: 'z'}},
+  {stimulus: "<p style='color:green;font-size:60pt;'>赤</p>",
+   data: { no:'2', stim_type: 'incongruent', correct_key_press: 'n'}},
+  {stimulus: "<p style='color:yellow;font-size:60pt;'>赤</p>",
+   data: { no:'3', stim_type: 'incongruent', correct_key_press: 'm'}},
+  {stimulus: "<p style='color:blue;font-size:60pt;'>赤</p>",
+   data: { no:'4', stim_type: 'incongruent', correct_key_press: 'x'}},
+  {stimulus: "<p style='color:red;font-size:60pt;'>緑</p>",
+   data: { no:'5', stim_type: 'congruent', correct_key_press: 'z'}},
+  {stimulus: "<p style='color:green;font-size:60pt;'>緑</p>",
+   data: { no:'6', stim_type: 'incongruent', correct_key_press: 'n'}},
+  {stimulus: "<p style='color:yellow;font-size:60pt;'>緑</p>",
+  　data: { no:'7', stim_type: 'incongruent', correct_key_press: 'm'}},
+  {stimulus: "<p style='color:blue;font-size:60pt;'>緑</p>",
+  　data: { no:'8', stim_type: 'incongruent', correct_key_press: 'x'}},
+  {stimulus: "<p style='color:red;font-size:60pt;'>黄</p>",
+  　data: { no:'9', stim_type: 'congruent', correct_key_press: 'z'}},
+  {stimulus: "<p style='color:green;font-size:60pt;'>黄</p>",
+  　data: { no:'10', stim_type: 'incongruent', correct_key_press: 'n'}},
+  {stimulus: "<p style='color:yellow;font-size:60pt;'>黄</p>",
+  　data: { no:'11', stim_type: 'incongruent', correct_key_press: 'm'}},
+  {stimulus: "<p style='color:blue;font-size:60pt;'>黄</p>",
+  　data: { no:'12', stim_type: 'incongruent', correct_key_press: 'x'}},
+  {stimulus: "<p style='color:red;font-size:60pt;'>青</p>",
+  　data: { no:'13', stim_type: 'congruent', correct_key_press: 'z'}},
+  {stimulus: "<p style='color:green;font-size:60pt;'>青</p>",
+  　data: { no:'14', stim_type: 'incongruent', correct_key_press: 'n'}},
+  {stimulus: "<p style='color:yellow;font-size:60pt;'>青</p>",
+  　data: { no:'15', stim_type: 'incongruent', correct_key_press: 'm'}},
+  {stimulus: "<p style='color:blue;font-size:60pt;'>青</p>",
+  　data: { no:'16', stim_type: 'incongruent', correct_key_press: 'x'}}
 ];
 
 /*ストループ課題*/
@@ -133,12 +102,4 @@ var debrief = {
 };
 
 /*タイムラインの設定*/
-var timeline = [];
-  timeline.push(welcome);
-  timeline.push({
-    type: 'fullscreen',
-    fullscreen_mode: true
-  });
-  timeline.push(instructions);
-  timeline.push(stroop);
-  timeline.push(debrief);
+var timeline = [fullscreen,instructions,stroop,debrief];
