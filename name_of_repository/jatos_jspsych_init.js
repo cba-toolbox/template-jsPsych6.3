@@ -1,3 +1,10 @@
-var jsPsych = initJsPsych({
-  on_finish: () => jatos.endStudy(jsPsych.data.get().json())
-});
+jatos.onLoad(function() {
+    jsPsych.init( {
+    　timeline: timeline,
+      on_finish: function() {
+        var resultJson = jsPsych.data.get().json();
+        jatos.submitResultData(resultJson, jatos.startNextComponent);
+      }
+    });
+  });
+  
