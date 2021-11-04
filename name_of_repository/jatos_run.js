@@ -6,5 +6,5 @@ jatos.onLoad(function() {
         jatos.submitResultData(resultJson, jatos.startNextComponent);
       }
     });
-  });
+});
   
