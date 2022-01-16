@@ -4,5 +4,5 @@
 - 「name_of_repository」フォルダの名前をリポジトリ名に変更する。
 - demo_name_of_repository.htmlとname_of_repository.htmlのファイル名の"name_of_repository"部分をリポジトリ名に変更する。
 - demo_name_of_repository.htmlとname_of_repository.htmlを開いて，jsPsychへのパスに含まれる「name_of_repository」をリポジトリ名に変更する。
-- README.mdファイルの名前をREADME_リポジトリ名.mdに変更する。
+- README_name_of_repository.mdファイルのname_of_repositoryをリポジトリ名に変更する。
 - 名前を変更した「name_of_repository」フォルダ内のtask.jsに変更を加えて課題を作成します（その他は基本的には変更しない）。
